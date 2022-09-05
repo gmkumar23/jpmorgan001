@@ -4,7 +4,7 @@ import json
 
 
 obj = Utils()
-DATA_FILE = 'E:\\jpmorgan\\data.json'
+DATA_FILE = 'data.json'
 
 
 def read_data (path= DATA_FILE):
