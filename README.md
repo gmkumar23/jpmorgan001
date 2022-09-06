@@ -20,6 +20,8 @@ To execute the file you should install Python 3.x version and scipy
   
   python -m pip install scipy== 1.7.3  (latest version)
   
+  python -m pip install tabulate ( This module is for show dataframe data in tabular form)
+  
   to execute the code use below commands:
   
   1) go to super_simple_stock.py file path
