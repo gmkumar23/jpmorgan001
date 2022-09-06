@@ -19,9 +19,10 @@ To execute the file you should install Python 3.x version and scipy
   python -m pip install python==<your version> (3.7.1)
   
   python -m pip install scipy== 1.7.3  (latest version)
-   python -m pip install numpy
-  
+  python -m pip install numpy
+  python -m pip install yfinance
   python -m pip install tabulate ( This module is for show dataframe data in tabular form)
+  
   
   to execute the code use below commands:
   
@@ -30,5 +31,7 @@ To execute the file you should install Python 3.x version and scipy
   2) python super_simple_stock.py
   
   3) Output will be write to result.json
+  
+  4) Volume Weighted Stock Price based on trades in past 15 minutes will display on console.
   
   
