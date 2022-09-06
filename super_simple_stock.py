@@ -1,15 +1,23 @@
 from utils import Utils
 import csv
 import json
+import yfinance as yf
+import pandas as pd
+import numpy as np
 
 
 obj = Utils()
 DATA_FILE = 'data.json'
 
 
+def get_share_data(sname):
+	data = yf.download(tickers=sname, period="1d", interval="1m")
+	return data
+
+
 def read_data (path= DATA_FILE):
 	'''This function read data from given csv file'''
-	with open('data.json') as f:
+	with open(path) as f:
 		data = json.load(f)
 		return data
 
@@ -58,6 +66,15 @@ def geo_metric_mean():
 	with open('result.json', 'w') as fp:
 		json.dump(data, fp, indent=4)
 
+def vwsp(scrit_code = 'AAPL'):	
+	df = get_share_data(scrit_code)
+	
+	df['price'] = (df.Open+df.High + df.Close)/3
+	df['vwap'] = (np.cumsum(df.Volume * df.price) / np.cumsum(df.Volume))
+	print(df.to_markdown())
+
 
 if __name__ == '__main__':
 	geo_metric_mean()
+	print ('\n ******Calculate Volume Weighted Stock Price based on trades ********\n')
+	vwsp()
