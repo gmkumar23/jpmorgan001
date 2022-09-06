@@ -19,6 +19,7 @@ To execute the file you should install Python 3.x version and scipy
   python -m pip install python==<your version> (3.7.1)
   
   python -m pip install scipy== 1.7.3  (latest version)
+   python -m pip install numpy
   
   python -m pip install tabulate ( This module is for show dataframe data in tabular form)
   
