@@ -30,7 +30,7 @@ To execute the file you should install Python 3.x version and scipy
   
   2) python super_simple_stock.py
   
-  3) Output will be write to result.json
+  3) Dividend, PE Ratio and Geometric Mean data will be write to result.json
   
   4) Volume Weighted Stock Price based on trades in past 15 minutes will display on console.
   
